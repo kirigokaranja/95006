@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Fee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class QueryController extends Controller
 {
@@ -15,6 +17,7 @@ class QueryController extends Controller
     {
         $q = Input::get ( 'studentno' );
         if ($q != ''){
+
             $id = Fee::where('studentId','LIKE','%'.$q.'%')->get();
 
             if(count($id) > 0){
