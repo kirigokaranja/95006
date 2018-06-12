@@ -27,7 +27,7 @@ class FeeController extends Controller
     {
 
         $this->validate(request(), [
-            'studentId' => 'required|integer|exists:Student,studentNumber',
+            'studentId' => 'required|integer|exists:students,studentNumber',
             'amount' => 'required|integer',
             'dateOfPayment' => 'required',
         ]);
