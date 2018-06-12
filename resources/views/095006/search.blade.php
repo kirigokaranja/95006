@@ -89,7 +89,7 @@
     </div>
 </form>
 @if(isset($details))
-    <p> The Search results for your query <b> {{ $query }} </b> are :</p>
+    <p> You've searched for <b> {{ $query }} </b> :</p>
     <h3>Student Fee Details</h3>
     <table>
         <tr>
